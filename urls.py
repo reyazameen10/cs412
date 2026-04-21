@@ -24,4 +24,5 @@ urlpatterns = [
     path('mini_insta/', include('mini_insta.urls')),
     path('dadjokes/', include('dadjokes.urls')), #new
     path('voter_analytics/', include('voter_analytics.urls')), #new
+    path('project/', include('project.urls')), #new: for project app
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

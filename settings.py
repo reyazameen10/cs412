@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'rest_framework', #new: django rest framework
     'rest_framework.authtoken', #new: for token authentication
     'dadjokes', #new: for dad jokes app
+    'project', #new: for project app
 ]
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
@@ -63,7 +64,7 @@ ROOT_URLCONF = 'cs412.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / "templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -76,6 +77,10 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'cs412.wsgi.application'
+
+# Authentication settings
+LOGIN_REDIRECT_URL = '/project/'
+LOGOUT_REDIRECT_URL = '/project/'
 
 
 # Database
